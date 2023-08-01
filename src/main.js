@@ -27,6 +27,7 @@ const passwordCookies = document.getElementById("passwordCookies");
 const myDate = new Date();
 
 const ajaxUser = document.getElementById("ajaxUser");
+const ajaxImg = document.getElementById("ajaxImg");
 // go to welcome page
 let submitUsername = () => {
     formDataInput = document.getElementById("formSubmit")
@@ -160,6 +161,7 @@ async function showUser1() {
         first name =>${data.data.first_name}
         last name =>${data.data.last_name}
         `
+        ajaxImg.src=data.data.avatar
     }
     console.log(data.data.avatar);
 }
